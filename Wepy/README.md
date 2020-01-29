@@ -7,3 +7,13 @@ WePY (发音: /'wepi/) 是小程序上最早的一款类 Vue 语法的开发框�
 - 支持 Vue watch/computed/mixin 等特性
 - 基于原生组件实现组件化开发
 - 支持 TypeScript
+
+# 特点
+- 开发风格：接近Vue.js，支持组件 Props 传值、自定义事件、组件分布式复用 Mixin、计算属性函数 computed、模版内容分发 slot 等。
+- 组件化：组件化开发，完美解决组件隔离、组件嵌套、组件通信等问题。
+- npm：支持使用第三方 npm 资源，自动处理 npm 资源之间的依赖关系，完美兼容所有平台依赖的 npm 资源包。
+- Promise：通过 polyfill 让小程序完美支持 Promise，解决回调烦恼。
+- ES2015：可使用 Generator Fu-nction、Class、Async Function 等特性，大大提升开发效率。
+- 编译器：支持样式编译器 Less、Sass、Stylus，模版编译器 wx-ml、Pug，代码编译器 Babel、TypeScript。
+- 插件：支持多种插件处理，如文件压缩、图片压缩、内容替换等，扩展简单，使用方便。
+- 框架大小：压缩后有 24.3KB 空间即可拥有所有框架功能，额外增加 8.9KB 空间后即可使用 Promise 和 Async Function。
