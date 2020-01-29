@@ -1,0 +1,26 @@
+<template>
+  <view style="text-align: center">
+    <text class="text">{{wordData}}</text>
+  </view>
+</template>
+
+<script>
+	import wepy from 'wepy'
+
+	export default class HelloWorld extends wepy.page {
+		components = {}
+		mixins = []
+		data = {
+			wordData: 'Hello World!'
+    }
+		methods = {}
+		events = {}
+		onload(){}
+	}
+</script>
+
+<style lang="less">
+  .text {
+    color: red
+  }
+</style>
