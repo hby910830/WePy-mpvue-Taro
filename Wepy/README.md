@@ -60,3 +60,24 @@ WePY (发音: /'wepi/) 是小程序上最早的一款类 Vue 语法的开发框�
 </config>
 ```
 
+# 安装使用
+安装（更新） wepy 命令行工具。
+
+> npm install @wepy/cli -g
+
+生成开发示例
+
+> wepy init standard myproject
+
+安装依赖
+
+> cd myproject
+>
+> npm install
+
+开发实时编译
+
+> wepy build --watch
+
+##### 开发者工具导入项目
+使用微信开发者工具新建项目，本地开发选择项目根目录，会自动导入项目配置。
