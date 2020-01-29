@@ -17,3 +17,46 @@ WePY (发音: /'wepi/) 是小程序上最早的一款类 Vue 语法的开发框�
 - 编译器：支持样式编译器 Less、Sass、Stylus，模版编译器 wx-ml、Pug，代码编译器 Babel、TypeScript。
 - 插件：支持多种插件处理，如文件压缩、图片压缩、内容替换等，扩展简单，使用方便。
 - 框架大小：压缩后有 24.3KB 空间即可拥有所有框架功能，额外增加 8.9KB 空间后即可使用 Promise 和 Async Function。
+
+# Demo
+```
+<style lang="less">
+    @color: #4D926F;
+    .userinfo {
+        color: @color;
+    }
+</style>
+<template lang="pug">
+    div(class='container')
+        div(class='userinfo' @tap='tap')
+            mycom(:prop='myprop' @fn='myevent')
+            text {{now}}
+</template>
+<script>
+    import wepy from '@wepy/core';
+
+    wepy.page({
+        data: {
+            myprop: {}
+        },
+        computed: {
+            now () { return new Date().getTime(); }
+        },
+        async onLoad() {
+            await sleep(3);
+            console.log('Hello World');
+        },
+        sleep(time) {
+            return new Promise((resolve, reject) => setTimeout(resolve, time * 1000));
+        },
+    }
+</script>
+<config>
+{
+  usingComponents: {
+    mycom: "~@/components/some-component"
+  }
+}
+</config>
+```
+
